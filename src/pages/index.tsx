@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       {/* Introduction */}
       <div className="relative flex flex-row items-center w-full bg-cream h-[100vh] content-between overflow-hidden">
-        <div className="flex flex-col lg:w-1/2 text-shadow lg:text-shadow-none"> 
+        <div className="flex flex-col lg:w-1/2 text-shadow lg:text-shadow-none">
           {/* <img className="relative w-3/5 self-center" src="/images/logoweb.png" /> */}
           <div className="z-10 relative inline-flex mt-10 ml-10 text-5xl">
             <GiWoodBeam className="text-orange-500 h-24 w-24 animate-pulse" />
@@ -47,8 +47,8 @@ function App() {
         <div className="w-screen h-screen max-w-full max-h-full bg-meadow-400"></div>
         <div className="p-12">
           <p className="text-xl text-white">
-            "We are artists that have done a lot of wood sculpting project and many of
-            experience."
+            &quot;We are artists that have done a lot of wood sculpting project
+            and many of experience.&quot;
             <span className="absolute bottom-28">- Poom</span>
           </p>
         </div>
@@ -56,7 +56,7 @@ function App() {
       <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[50vh]">
         <div className="p-12">
           <p className="text-xl text-white">
-            "Wood Carving is true way to enlightenment."
+            &quot;Wood Carving is true way to enlightenment.&quot;
             <span className="absolute bottom-28">- Phupha</span>
           </p>
         </div>
