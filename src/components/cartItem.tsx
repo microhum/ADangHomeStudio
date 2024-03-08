@@ -25,7 +25,6 @@ const ShoppingCartItem = ({
   return (
     <button
       id={id}
-      key={name}
       onClick={handleClick}
       className={`relative inline-flex justify-around w-4/5 px-2 py-5 bg-white rounded-xl border-4 transition-all duration-400 ${
         selected == id
