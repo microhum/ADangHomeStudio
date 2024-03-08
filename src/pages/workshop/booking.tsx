@@ -43,8 +43,8 @@ const Booking = () => {
   ];
   return (
     <>
-      <div className="flex flex-col  items-center bg-cream w-full h-[20vh]" />
-      <div className="flex flex-col gap-8 items-center bg-cream w-full h-screen">
+      <div className="bg-cream w-full h-[20vh]" />
+      <div className="flex flex-col gap-8 items-center bg-cream w-full h-full">
         <p className="text-3xl text-meadow-400 font-serif font-bold">
           Booking Avaliable : {items.length}
         </p>
@@ -59,10 +59,11 @@ const Booking = () => {
             />
           </div>
         ))}
-        <button className="text-2xl text-white bg-meadow-300 p-6 rounded-xl border-4 hover:text-black hover:border-black">
+        <button className="text-2xl text-white bg-meadow-300 p-6 rounded-xl border-4 hover:text-black hover:border-black transition-all duration-400">
           Submit
         </button>
       </div>
+      <div className="bg-cream w-full h-[20vh]" />
     </>
   );
 };

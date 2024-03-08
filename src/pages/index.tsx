@@ -3,6 +3,7 @@ import { GiWoodBeam } from "react-icons/gi";
 import { Questrial } from "next/font/google";
 import ContactSideBar from "@/components/ContactSideBar";
 import { GoDotFill } from "react-icons/go";
+import Link from "next/link";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
               <span className="text-amber-600 font-bold"> Wood</span> Carving.
             </p>
           </div>
-          <button className="z-10 mt-10 self-center text-2xl bg-meadow-400 w-48 h-16 rounded-xl text-white">
-            Learn More.
+          <button className="z-10 mt-10 self-center text-2xl gradient_transition from-meadow-300 from-20% to-amber-600 to-60% w-48 h-16 rounded-xl text-white transition-all duration-1000 hover:bg-right">
+            <Link href="/workshop/booking">Book Now !</Link>
           </button>
         </div>
         <div>

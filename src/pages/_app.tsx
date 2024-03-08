@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={questrial.className}>
       <Head>
-        <title>ADangHomeStudio</title>
+        <title>A.DangHomeStudio</title>
       </Head>
       <NavBar/>
       <ContactSideBar/>

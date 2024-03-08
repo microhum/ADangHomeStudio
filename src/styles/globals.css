@@ -31,6 +31,15 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #a0aec0;
 }
+.gradient_transition {
+  background: linear-gradient(45deg, var(--tw-gradient-from, #f6d365) var(--tw-gradient-from-position), var(--tw-gradient-to, #fda085) var( --tw-gradient-to-position), var(--tw-gradient-stops, #f6d365)) var(--x, 0)/ 200%;
+}
+.gradient_transition:hover { --x: 100%; }
+
+.button-meadow {
+  --c1: 
+}
+
 
 body {
   @apply bg-black font-[14px];

@@ -2,8 +2,10 @@ import { useEffect, useRef } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
+import { IoCloseCircle } from "react-icons/io5";
 import useSidebarStore from "@/stores/SideBarStore";
 import Image from "next/image";
+import Link from "next/link";
 
 const ContactSideBar = () => {
   const { isOpen, toggleSidebar, closeSideBar } = useSidebarStore();
@@ -30,14 +32,27 @@ const ContactSideBar = () => {
       }`}
     >
       <div className="flex flex-col items-center gap-1 mt-20 text-white">
+        <button onClick={closeSideBar}>
+          <IoCloseCircle className="absolute text-5xl top-5 right-5" />
+        </button>
         <h1 className="text-2xl mb-1 font-bold">Contact Us</h1>
         <p className="inline-flex">
           <FaInstagram className="translate-y-1 mr-2" />
-          Instagram: ADangHomeStudio
+          <Link href="https://www.instagram.com/a.danghomestudio/" target="_blank">
+            Instagram:{" "}
+            <span className="underline underline-offset-4">
+              ADangHomeStudio
+            </span>
+          </Link>
         </p>
         <p className="inline-flex">
           <FaFacebook className="translate-y-1 mr-2" />
-          Facebook: ADangHomeStudio
+          <Link href="https://www.facebook.com/a.danghomestudio" target="_blank">
+            Facebook:{" "}
+            <span className="underline underline-offset-4">
+              ADangHomeStudio
+            </span>
+          </Link>
         </p>
         <p className="inline-flex">
           <IoIosCall className="translate-y-1 mr-2" />
@@ -47,7 +62,13 @@ const ContactSideBar = () => {
           <IoIosCall className="translate-y-1 mr-2" />
           Tel: 0000000000 (Phupha)
         </p>
-        <Image className="mt-24"src="/images/logo.png" width="256" height="256" alt=""/>
+        <Image
+          className="mt-24"
+          src="/images/logo.png"
+          width="256"
+          height="256"
+          alt=""
+        />
       </div>
     </div>
   );

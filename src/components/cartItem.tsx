@@ -26,7 +26,7 @@ const ShoppingCartItem = ({
     <button
       id={id}
       onClick={handleClick}
-      className={`relative inline-flex justify-around w-4/5 px-2 py-5 bg-white rounded-xl border-4 transition-all duration-400 ${
+      className={`relative flex flex-col justify-center gap-y-5 items-center md:flex-row md:justify-around w-4/5 px-2 py-5 bg-white rounded-xl border-4 transition-all duration-400 ${
         selected == id
           ? "border-amber-600"
           : "border-white hover:border-gray-200 hover:animate-pulse"
