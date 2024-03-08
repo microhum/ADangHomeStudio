@@ -11,7 +11,9 @@ const NavBar = () => {
         <Image
           src="/images/logoweb.png"
           alt="Logo"
-          className="relative w-28 rounded-s-xl"
+          width={110}
+          height={110}
+          className="relative rounded-s-xl"
         />
         {/* <FaDog size={40} color="white" /> */}
         <div className="text-sm sm:text-lg lg:text-2xl text-white">A Dang Home Studio.</div>

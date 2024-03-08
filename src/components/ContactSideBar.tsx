@@ -47,7 +47,7 @@ const ContactSideBar = () => {
           <IoIosCall className="translate-y-1 mr-2" />
           Tel: 0000000000 (Phupha)
         </p>
-        <Image className="w-64 mt-24"src="/images/logo.png" alt=""/>
+        <Image className="mt-24"src="/images/logo.png" width="256" height="256" alt=""/>
       </div>
     </div>
   );
