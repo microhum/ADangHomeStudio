@@ -26,16 +26,30 @@ const Booking = () => {
       price: 2000,
       place_left: 1,
     },
+    {
+      id: 4,
+      description: "Good Course You should go !",
+      name: "Item 4",
+      price: 2000,
+      place_left: 1,
+    },
+    {
+      id: 5,
+      description: "Good Course You should go !",
+      name: "Item 5",
+      price: 2000,
+      place_left: 1,
+    },
   ];
   return (
     <>
       <div className="flex flex-col  items-center bg-cream w-full h-[20vh]" />
-      <div className="flex flex-col  gap-8 items-center bg-cream w-full h-screen">
+      <div className="flex flex-col gap-8 items-center bg-cream w-full h-screen">
         <p className="text-3xl text-meadow-400 font-serif font-bold">
           Booking Avaliable : {items.length}
         </p>
         {items.map((item) => (
-          <div key={item.name}>
+          <div className="flex items-center justify-center w-full" key={item.id+"_"+item.name}>
             <ShoppingCartItem
               id={item.id}
               description={item.description}
