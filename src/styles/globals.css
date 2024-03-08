@@ -1,10 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
 :root {
   --tw-shadow-color: black;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-meadow-400
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
 }
 
 body {

@@ -1,28 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import NavBar from "@/components/NavBar";
 import { GiWoodBeam } from "react-icons/gi";
 import { Questrial } from "next/font/google";
-
-const questrial = Questrial({
-  weight: "400",
-  subsets: ["latin"],
-});
+import ContactSideBar from "@/components/ContactSideBar";
+import { GoDotFill } from "react-icons/go";
 
 function App() {
   return (
-    <main className={`${questrial.className}`}>
-      <NavBar />
+    <main>
+
       {/* Introduction */}
-      <div className="relative flex flex-row items-center w-full bg-cream h-[100vh] content-between overflow-hidden">
-        <div className="flex flex-col lg:w-1/2 text-shadow lg:text-shadow-none">
+      <div className="relative flex flex-row items-center w-full bg-cream h-[100vh] content-between">
+        <div className="flex flex-col lg:w-1/2 text-shadow lg:text-shadow-sm">
           {/* <img className="relative w-3/5 self-center" src="/images/logoweb.png" /> */}
           <div className="z-10 relative inline-flex mt-10 ml-10 text-5xl">
-            <GiWoodBeam className="text-orange-500 h-24 w-24 animate-pulse" />
-            <p className="ml-10 text-orange-500">
+            <GiWoodBeam className= "hidden lg:flex text-amber-600 h-24 w-24 animate-bounce" />
+            <p className="ml-10 text-white">
               Spark Your Dream On
-              <span className="text-amber-800 font-bold"> Wood</span> Carving
+              <span className="text-amber-600 font-bold"> Wood</span> Carving
             </p>
           </div>
           <button className="z-10 mt-10 self-center text-2xl bg-meadow-400 w-48 h-16 rounded-xl text-white">
@@ -31,7 +25,7 @@ function App() {
         </div>
         <div>
           <video
-            className=" z-0 top-0 right-0 w-full h-full absolute object-cover mt-10 lg:h-[80vh] lg:w-2/6  lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:right-14 lg:border-8 border-orange-500"
+            className=" z-0 top-0 right-0 w-full h-full absolute object-cover mt-10 lg:h-[80vh] lg:w-2/6  lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:right-14 lg:border-8 border-cyan-400"
             autoPlay
             loop
             muted
@@ -39,6 +33,12 @@ function App() {
             <source src="/videos/preview.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </div>
+        <div className="absolute bottom-0 left-0">
+          
+          <GoDotFill className="absolute h-48 w-48 bottom-0 -translate-y-36 translate-x-24 text-cyan-300"/>
+          <GoDotFill className="absolute h-48 w-48 bottom-0 -translate-y-6 translate-x-64 text-cyan-300"/>
+          <GoDotFill className="absolute h-96 w-96 bottom-0 translate-y-48 text-cyan-300"/>
         </div>
       </div>
 
