@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import useSidebarStore from "@/stores/SideBarStore";
+import Image from "next/image";
 
 const ContactSideBar = () => {
   const { isOpen, toggleSidebar, closeSideBar } = useSidebarStore();
@@ -46,7 +47,7 @@ const ContactSideBar = () => {
           <IoIosCall className="translate-y-1 mr-2" />
           Tel: 0000000000 (Phupha)
         </p>
-        <img className="w-64 mt-24"src="/images/logo.png" />
+        <Image className="w-64 mt-24"src="/images/logo.png" alt=""/>
       </div>
     </div>
   );

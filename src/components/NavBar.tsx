@@ -1,17 +1,14 @@
-import { FC } from "react";
-import { FaDog } from "react-icons/fa";
-import { FaD } from "react-icons/fa6";
 import Link from "next/link";
-import { FaHome } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
 import useSidebarStore from "@/stores/SideBarStore";
+import Image from "next/image";
 
 const NavBar = () => {
   const toggleSidebar = useSidebarStore((state) => state.toggleSidebar)
   return (
     <nav className="fixed top-0 flex justify-around h-[10vh] w-full p-9 bg-meadow-300 z-40 drop-shadow-lg rounded-b-xl">
       <div className="relative inline-flex items-center gap-x-8">
-        <img
+        <Image
           src="/images/logoweb.png"
           alt="Logo"
           className="relative w-28 rounded-s-xl"
