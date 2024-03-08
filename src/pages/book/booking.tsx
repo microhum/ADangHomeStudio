@@ -14,7 +14,7 @@ const Booking = () => {
       <div className="flex flex-col  gap-8 items-center bg-cream w-full h-screen">
         <p className="text-3xl text-meadow-400 font-serif font-bold">Booking Avaliable : {items.length}</p>
         {items.map((item) => (
-            <ShoppingCartItem key={item.name} id={item.id} description={item.description} name={item.name} price={item.price} place_left={item.place_left}/>
+            <ShoppingCartItem key={item.id} id={item.id} description={item.description} name={item.name} price={item.price} place_left={item.place_left}/>
         ))}
         <button className="text-2xl text-white bg-meadow-300 p-6 rounded-xl border-4 hover:text-black hover:border-black">Submit</button>
       </div>
