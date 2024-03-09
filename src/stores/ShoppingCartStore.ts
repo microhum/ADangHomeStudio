@@ -1,14 +1,16 @@
-import { create } from 'zustand';
-
-interface ShoppingItemProps {
-    selected: any
-}
+import { create } from "zustand";
 
 const ShoppingItemStore = (set: any) => ({
-    selected: null,
-    setSelected: (id: any) => set((state: ShoppingItemProps) => ({ selected: id })),
+  selected: {
+    id: null,
+    name: null,
+    description: null,
+    price: null,
+    place_left: null,
+  },
+  setSelected: (item: any) => set(() => ({ selected: item })),
 });
 
-const useShoppingItemStore = create(ShoppingItemStore )
+const useShoppingItemStore = create(ShoppingItemStore);
 
 export default useShoppingItemStore;

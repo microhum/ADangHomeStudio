@@ -20,7 +20,7 @@ function App() {
             </p>
           </div>
           <button className="z-10 mt-10 self-center text-2xl gradient_transition from-meadow-300 from-20% to-amber-600 to-60% w-48 h-16 rounded-xl text-white transition-all duration-1000 hover:bg-right">
-            <Link href="/workshop/booking">Book Now !</Link>
+            <Link className="w-full h-full flex items-center justify-center" href="/workshop/booking">Book Now !</Link>
           </button>
         </div>
         <div>
@@ -51,7 +51,7 @@ function App() {
         />
       </div>
       {/* Target */}
-      <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[50vh] ">
+      <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[35vh] ">
         <div className="inline-flex justify-center w-screen h-screen max-w-full max-h-full bg-meadow-400">
           <p className="text-lg lg:text-4xl self-center text-white font-semibold p-12">Learning Art By Doing !</p>
         </div>
@@ -64,7 +64,7 @@ function App() {
           <span className="text-white text-end text-xl font-semibold">- Poom</span>
         </div>
       </div>
-      <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[50vh] drop-shadow-2xl">
+      <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[35vh] drop-shadow-2xl">
         <div className="flex flex-col p-12">
           <p className="text-sm lg:text-xl text-white">
             &quot;Wood Carving is true way to enlightenment.&quot;

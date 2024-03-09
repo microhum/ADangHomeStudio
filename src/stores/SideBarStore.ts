@@ -10,6 +10,6 @@ const SidebarStore = (set: any) => ({
     closeSideBar: () => set({isOpen: false})
 });
 
-const useSidebarStore = create(SidebarStore )
+const useSidebarStore = create(SidebarStore)
 
 export default useSidebarStore;
