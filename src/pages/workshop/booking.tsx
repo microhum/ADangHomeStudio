@@ -109,13 +109,17 @@ const Booking = () => {
             <ShoppingCartItem item={item} />
           </div>
         ))}
+      </div>
+      {selected.id != null ? (
         <button
           onClick={redirectToItem}
-          className="text-2xl text-white bg-meadow-300 p-6 rounded-xl border-4 hover:text-black hover:border-black transition-all duration-400"
+          className="fixed bottom-0 left-0 right-0 drop-shadow-xl mx-auto text-xl text-white bg-meadow-300 py-5 rounded-t-xl border-4 hover:text-black hover:bg-white  transition-all duration-400"
         >
           Submit
         </button>
-      </div>
+      ) : (
+        ""
+      )}
       <div className="bg-cream w-full h-[20vh]" />
     </>
   );
