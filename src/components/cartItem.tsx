@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useState } from "react";
-import useShoppingItemStore from "@/stores/ShoppingCartStore";
+import useShoppingItemStore from "@/stores/ShoppingItemStore";
 import { FaPaintBrush } from "react-icons/fa";
 
 interface ShoppingCartProps {

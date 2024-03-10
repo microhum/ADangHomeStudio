@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar";
 import { useCallback, useState } from "react";
-import ShoppingCartItem from "@/components/cartItem";
-import useShoppingItemStore from "@/stores/ShoppingCartStore";
+import ShoppingCartItem from "@/components/CartItem";
+import useShoppingItemStore from "@/stores/ShoppingItemStore";
 import { useRouter } from "next/router";
 
 const Booking = () => {
