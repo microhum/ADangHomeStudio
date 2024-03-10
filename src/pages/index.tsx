@@ -40,6 +40,7 @@ function App() {
           <GoDotFill className="absolute h-96 w-96 bottom-0 translate-y-48 text-cyan-300" />
         </div>
       </div>
+      
       {/* Link */}
       <div className="relative grid grid-cols-1 w-full max-h-full h-[80vh] bg-amber-300">
         <div className="absolute bg-black opacity-70 w-full h-full"></div>
@@ -50,6 +51,7 @@ function App() {
           className="bg-[url('/images/Image_preview2.jpg')] bg-no-repeat bg-cover bg-center bg-fixed object-cover w-full h-[40vh]"
         />
       </div>
+
       {/* Target */}
       <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[35vh] ">
         <div className="inline-flex justify-center w-screen h-screen max-w-full max-h-full bg-meadow-400">
