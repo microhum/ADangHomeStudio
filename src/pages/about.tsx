@@ -3,7 +3,7 @@ import NavBar from "@/components/NavBar"
 const About = () => {
     return (
         <>
-        <div className="min-h-[300vh]">Hello World</div>
+        <div className="flex flex-col bg-cream w-full h-full">Hello World</div>
         </>
     )
 }
