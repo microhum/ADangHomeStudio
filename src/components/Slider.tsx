@@ -2,7 +2,7 @@ import sliderData from "@/lib/Items";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
-export default function slider() {
+const Slider = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
@@ -23,3 +23,5 @@ export default function slider() {
     </div>
   );
 }
+
+export default Slider
