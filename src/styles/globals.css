@@ -31,6 +31,10 @@
   --c1: 
 }
 
+.cartoon-hero {
+  background-image: url("/images/cartoon_bg.jpg")
+}
+
 html {
   @apply scroll-smooth;
 }

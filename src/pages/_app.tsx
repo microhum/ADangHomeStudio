@@ -4,7 +4,7 @@ import { Questrial } from "next/font/google";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import ContactSideBar from "@/components/ContactSideBar";
-
+import Footer from "@/components/Footer"
 const questrial = Questrial({
   weight: "400",
   subsets: ["latin"],
@@ -12,13 +12,13 @@ const questrial = Questrial({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={questrial.className}>
+    <main className={`${questrial.className} cartoon-hero bg-repeat-y bg-center bg-contain`} >
       <Head>
         <title>A.DangHomeStudio</title>
       </Head>
       <NavBar/>
-      <ContactSideBar/>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
+      <Footer/>
     </main>
-  );
+  ); 
 }

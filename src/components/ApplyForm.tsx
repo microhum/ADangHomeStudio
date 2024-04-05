@@ -75,7 +75,7 @@ const ApplyForm = () => {
         />
       </div>
       <div className="flex justify-center">
-        <button className="bg-cream text-lg mt-6 p-3 hover:bg-amber-500 hover:scale-105 transition-all rounded-lg" type="submit">
+        <button className="bg-cream text-lg mt-6 p-3 h-16 hover:bg-amber-500 hover:scale-105 transition-all rounded-lg" type="submit">
           Go To Payment
         </button>
       </div>

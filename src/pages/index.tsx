@@ -66,7 +66,7 @@ function App() {
           <span className="text-white text-end text-xl font-semibold">- Poom</span>
         </div>
       </div>
-      <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[35vh] drop-shadow-2xl">
+      <div className="relative flex flex-row justify-around items-center w-full bg-meadow-300 h-[35vh]">
         <div className="flex flex-col p-12">
           <p className="text-sm lg:text-xl text-white">
             &quot;Wood Carving is true way to enlightenment.&quot;
@@ -74,7 +74,7 @@ function App() {
           </p>
           <span className="text-white text-end text-xl font-semibold">- Phupha</span>
         </div>
-        <div className="inline-flex justify-center w-screen h-screen max-w-full max-h-full bg-orange-200 drop-shadow-xl">
+        <div className="inline-flex justify-center w-screen h-screen max-w-full max-h-full bg-orange-200">
           <p className="text-lg lg:text-4xl self-center font-semibold p-12">Fun is matter !</p>
         </div>
       </div>
