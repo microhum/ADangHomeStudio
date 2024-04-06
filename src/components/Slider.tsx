@@ -51,21 +51,29 @@ const CustomSlider = (props: SliderProps) => {
             key={item.id}
           >
             {/* Description */}
-            {item.description ?
+            {item.description ? (
               <div className="p-6">
                 <h1 className="text-4xl text-white mb-5 font-bold">
                   WOODWORKING CLASS
                 </h1>
                 <ul className="list-disc">
                   {item.description.map((text: string, idx: number) => (
-                    <li key={idx} className="text-lg lg:text-2xl text-white font-medium">{text}</li>
+                    <li
+                      key={idx}
+                      className="text-lg lg:text-2xl text-white font-medium"
+                    >
+                      {text}
+                    </li>
                   ))}
                 </ul>
               </div>
-            : ""}
+            ) : (
+              ""
+            )}
 
-            {item.url?.map((url: string) => (
+            {item.url?.map((url: string, idx: number) => (
               <Image
+                key={idx}
                 className="w-full h-full object-cover"
                 width={512}
                 height={512}
