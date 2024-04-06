@@ -1,10 +1,11 @@
 interface MarqueeProps {
   children: React.ReactNode;
+  className?: string
 }
 
 const Marquee = (props: MarqueeProps) => {
   return (
-    <div className="relative flex w-full overflow-x-hidden bg-white">
+    <div className={`relative flex w-full overflow-x-hidden ${props.className}`}>
       <div className="py-4 animate-marquee whitespace-nowrap">
         {props.children}
       </div>

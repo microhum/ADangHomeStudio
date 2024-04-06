@@ -23,22 +23,22 @@ const Adults = () => {
       {/* WOODWHITTING */}
       <div className="flex flex-col sm:flex-row w-full h-[50vh] drop-shadow-2xl">
         <div className="flex h-full flex-col justify-center sm:w-5/12 bg-green-100">
-          <p className="text-4xl font-semibold p-6 self-center">WOODWHITTING</p>
+          <p className="text-xl lg:text-4xl font-semibold self-center">WOODWHITTING</p>
         </div>
         <Slider />
       </div>
 
-      <div className="grid grid-cols-3 w-full h-[30vh]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-full h-[30vh]">
         <div className="flex flex-col bg-meadow-300 justify-center items-center">
-          <p className="text-2xl text-white p-4">4- hr Workshop <span className="font-bold">CHOOSE</span></p>
-          <Marquee>
-            <span className="text-xl mx-3 font-bold">Wednesday</span>
-            <span className="text-xl mx-3">or</span>
-            <span className="text-xl mx-3 font-bold">Thursday</span>
-            <span className="text-xl mx-3">or</span>
-            <span className="text-xl mx-3 font-bold">Friday</span>
+          <p className="text-lg lg:text-2xl text-white">4- hr Workshop <span className="font-bold">CHOOSE</span></p>
+          <Marquee className="text-white">
+            <span className="text-3xl mx-3 font-bold">Wednesday</span>
+            <span className="text-3xl mx-3">or</span>
+            <span className="text-3xl mx-3 font-bold">Thursday</span>
+            <span className="text-3xl mx-3">or</span>
+            <span className="text-3xl mx-3 font-bold">Friday</span>
           </Marquee>
-          <p className="text-2xl text-white p-4">1.30PM - 5.30PM</p>
+          <p className="text-2xl text-white">1.30PM - 5.30PM</p>
         </div>
         <div className="flex bg-meadow-400">dwa</div>
         <div className="flex bg-meadow-300">dawdaw</div>
@@ -48,21 +48,21 @@ const Adults = () => {
       <div className="flex flex-col sm:flex-row w-full h-[50vh] drop-shadow-2xl">
         <Slider />
         <div className="flex h-full flex-col justify-center sm:w-5/12 bg-green-100">
-          <p className="text-4xl font-semibold p-6 self-center">WOOD JEWELRY</p>
+          <p className="text-xl lg:text-4xl font-semibold self-center">WOOD JEWELRY</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-3 w-full h-[30vh]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-full h-[30vh]">
         <div className="flex flex-col bg-meadow-300 justify-center items-center">
-          <p className="text-2xl text-white p-4">4- hr Workshop <span className="font-bold">CHOOSE</span></p>
-          <Marquee>
-            <span className="text-xl mx-3 font-bold">Wednesday</span>
-            <span className="text-xl mx-3">or</span>
-            <span className="text-xl mx-3 font-bold">Thursday</span>
-            <span className="text-xl mx-3">or</span>
-            <span className="text-xl mx-3 font-bold">Friday</span>
+          <p className="text-2xl text-white">4- hr Workshop <span className="font-bold">CHOOSE</span></p>
+          <Marquee className="text-white">
+            <span className="text-3xl mx-3 font-bold">Wednesday</span>
+            <span className="text-3xl mx-3">or</span>
+            <span className="text-3xl mx-3 font-bold">Thursday</span>
+            <span className="text-3xl mx-3">or</span>
+            <span className="text-3xl mx-3 font-bold">Friday</span>
           </Marquee>
-          <p className="text-2xl text-white p-4">1.30PM - 5.30PM</p>
+          <p className="text-2xl text-white">1.30PM - 5.30PM</p>
         </div>
         <div className="flex bg-meadow-400">dwa</div>
         <div className="flex bg-meadow-300">dawdaw</div>
@@ -71,23 +71,24 @@ const Adults = () => {
       {/* WOOD CARVING */}
       <div className="flex flex-col sm:flex-row w-full h-[50vh] drop-shadow-2xl">
         <div className="flex h-full flex-col justify-center sm:w-5/12 bg-green-100">
-          <p className="text-4xl font-semibold p-6 self-center">WOOD CARVING</p>
+          <p className="text-xl lg:text-4xl font-semibold self-center">WOOD CARVING</p>
         </div>
         <Slider />
       </div>
 
-      <div className="grid grid-cols-3 w-full h-[30vh]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-full h-[30vh]">
         <div className="flex flex-col bg-meadow-300 justify-center items-center">
-          <p className="text-2xl text-white p-4">4- hr Workshop <span className="font-bold">CHOOSE</span></p>
-          <Marquee>
-            <span className="text-xl mx-3 font-bold">Wednesday</span>
-            <span className="text-xl mx-3">or</span>
-            <span className="text-xl mx-3 font-bold">Thursday</span>
-            <span className="text-xl mx-3">or</span>
-            <span className="text-xl mx-3 font-bold">Friday</span>
+          <p className="text-2xl text-white">4- hr Workshop <span className="font-bold">CHOOSE</span></p>
+          <Marquee className="text-white">
+            <span className="text-3xl mx-3 font-bold">Wednesday</span>
+            <span className="text-3xl mx-3">or</span>
+            <span className="text-3xl mx-3 font-bold">Thursday</span>
+            <span className="text-3xl mx-3">or</span>
+            <span className="text-3xl mx-3 font-bold">Friday</span>
           </Marquee>
-          <p className="text-2xl text-white p-4">1.30PM - 5.30PM</p>
+          <p className="text-2xl text-white">1.30PM - 5.30PM</p>
         </div>
+        
         <div className="flex bg-meadow-400">dwa</div>
         <div className="flex bg-meadow-300">dawdaw</div>
       </div>

@@ -34,7 +34,7 @@ const Kids = () => {
       />
 
       {/* Marquee 1 */}
-      <Marquee>
+      <Marquee className="bg-white">
         <span className="text-2xl mx-4 font-bold">
           can be redeemed until Sunday 12th May 2024
         </span>
@@ -76,7 +76,7 @@ const Kids = () => {
       </div>
 
       {/* Marquee 2 */}
-      <Marquee>
+      <Marquee className="bg-white">
         <span className="text-2xl mx-4 font-bold">
           can be redeemed until Sunday 12th May 2024
         </span>
@@ -93,7 +93,7 @@ const Kids = () => {
           can be redeemed until Sunday 12th May 2024
         </span>
       </Marquee>
-      <Marquee>
+      <Marquee className="bg-white">
         <span className="text-2xl mx-4 font-bold">
           can be redeemed until Sunday 12th May 2024
         </span>
