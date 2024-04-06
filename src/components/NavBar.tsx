@@ -31,7 +31,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="fixed flex flex-col top-0 z-40 w-full max-h-[10vh]">
+    <nav className="fixed flex flex-col top-0 z-30 w-full max-h-[10vh]">
       <div
         className={`relative flex justify-between transition-all duration-200 ${
           showBackground ? "bg-green-300" : ""
@@ -50,13 +50,13 @@ const NavBar = () => {
           {/* <FaDog size={40} color="white" /> */}
         </div>
         <ul className="hidden items-center gap-x-12 lg:inline-flex">
-          <li className="text-lg text-zinc-900 hover:text-opacity-70 hover:underline transition duration-200 px-2 py-5">
+          <li className="text-lg text-zinc-600 hover:text-opacity-70 hover:underline transition duration-200 px-2 py-5">
             <Link href={`/kids`}>Classes for Kids</Link>
           </li>
-          <li className="text-lg text-zinc-900 hover:text-opacity-70 hover:underline transition duration-200 px-2 py-5">
+          <li className="text-lg text-zinc-600 hover:text-opacity-70 hover:underline transition duration-200 px-2 py-5">
             <Link href={`/adults`}>Workshop for Teens and Adults</Link>
           </li>
-          <li className="text-lg text-zinc-900 hover:text-opacity-70 hover:underline transition duration-200 px-2 py-5">
+          <li className="text-lg text-zinc-600 hover:text-opacity-70 hover:underline transition duration-200 px-2 py-5">
             <Link href={`/about`}>About Us</Link>
           </li>
           <li className="text-lg bg-zinc-900 rounded-lg text-white hover:opacity-80 hover:scale-105 hover:underline transition ease-out duration-200 px-5 py-3">

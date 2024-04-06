@@ -1,6 +1,6 @@
 import { GiWoodBeam } from "react-icons/gi";
 import Link from "next/link";
-import Slider from "@/components/Slider";
+import { Slider } from "@/components/Slider";
 
 function App() {
   return (
