@@ -11,12 +11,12 @@ const Footer = () => {
         ></iframe>
       </div>
       <div>
-        <div className="flex text-sm sm:text-lg lg:text-4xl font-bold font-serif">
+        <div className="flex text-zinc-700 text-sm sm:text-lg lg:text-4xl font-bold font-serif">
           Our studio is open by appointment only
         </div>
-        <div className="flex text-sm sm:text-lg lg:text-4xl font-bold font-serif">Wednesday-Sunday</div>
-        <div className="flex mt-10 text-sm lg:text-lg font-bold">2 Mahachok 17 Alley</div>
-        <div className="flex text-sm lg:text-lg font-bold">Pa Tan Chiang Mai, Thailand 50300</div>
+        <div className="flex text-zinc-700 text-sm sm:text-lg lg:text-4xl font-bold font-serif">Wednesday-Sunday</div>
+        <div className="flex mt-10 text-zinc-700 text-sm lg:text-lg font-bold">2 Mahachok 17 Alley</div>
+        <div className="flex text-zinc-700 text-sm lg:text-lg font-bold">Pa Tan Chiang Mai, Thailand 50300</div>
       </div>
     </div>
   );

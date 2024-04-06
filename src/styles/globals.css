@@ -39,6 +39,6 @@ html {
   @apply scroll-smooth;
 }
 body {
-  @apply bg-black font-[14px];
+  @apply font-[14px];
   font-family: "Questrial", sans-serif;
 }

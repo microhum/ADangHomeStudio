@@ -64,9 +64,6 @@ function App() {
         <div className="bg-[url('/images/Image_preview1.jpg')] bg-no-repeat bg-cover bg-center bg-fixed w-full h-[40vh]" />
         <div className="bg-[url('/images/Image_preview2.jpg')] bg-no-repeat bg-cover bg-center bg-fixed object-cover w-full h-[40vh]" />
       </div> */}
-      <div className="w-full h-[80vh]">
-
-      </div>
     </main>
   );
 }

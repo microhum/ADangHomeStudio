@@ -24,7 +24,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   handleClick();
   return (
     <main
-      className={`${questrial.className} cartoon-hero bg-repeat-y bg-center bg-contain`}
+      className={`${questrial.className} text-zinc-700 cartoon-hero bg-repeat-y bg-center bg-contain`}
     >
       <Head>
         <title>A.DangHomeStudio</title>
