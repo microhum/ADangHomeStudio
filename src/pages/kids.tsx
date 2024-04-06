@@ -40,8 +40,8 @@ const Kids = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full">
-        {kids_items.map((item: any[]) => {
-          return <CustomSlider data={item}/>
+        {kids_items.map((item: any[], idx) => {
+          return <CustomSlider key={`item${idx}`} data={item}/>
         })}
         
       </div>

@@ -57,8 +57,8 @@ const CustomSlider = (props: SliderProps) => {
                   WOODWORKING CLASS
                 </h1>
                 <ul className="list-disc">
-                  {item.description?.map((text: string) => (
-                    <li className="text-lg lg:text-2xl text-white font-medium">{text}</li>
+                  {item.description.map((text: string, idx: number) => (
+                    <li key={idx} className="text-lg lg:text-2xl text-white font-medium">{text}</li>
                   ))}
                 </ul>
               </div>
