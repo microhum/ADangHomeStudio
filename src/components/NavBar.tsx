@@ -60,7 +60,7 @@ const NavBar = () => {
             <Link href={`/about`}>About Us</Link>
           </li>
           <li className="text-lg bg-zinc-900 rounded-lg text-white hover:opacity-80 hover:scale-105 hover:underline transition ease-out duration-200 px-5 py-3">
-            <button onClick={toggleSidebar}>Get in touch</button>
+            <Link href={`/contact`}>Get in touch</Link>
           </li>
           {/* <li className="inline-flex gap-x-2 text-2xl text-amber-300 group hover:scale-110 hover:underline transition-all duration-300 px-2 py-5 font-bold">
             <FaBookmark className="translate-y-1 text-amber-300 transition-all" />
@@ -70,37 +70,37 @@ const NavBar = () => {
         {/* Dropdown */}
         <button
           onClick={() => setIsToggle((IsToggle) => !IsToggle)}
-          className="flex ml-16 self-center lg:hidden"
+          className={`flex ml-16 self-center lg:hidden transition-transform duration-700 ease-out ${IsToggle ? "rotate-180" : "rotate-0"}`}
         >
           <IoMdArrowDropdownCircle className=" text-white text-6xl" />
         </button>
       </div>
 
       <div
-        className={`${
-          IsToggle ? "top-0" : "-top-[550px] z-0"
-        } lg:hidden opacity-95  transition-all duration-200 relative self-end flex-col bg-meadow-400 rounded-md p-4 w-2/5 h-full`}
+        className={`lg:hidden ease-out transition-all duration-700 relative self-end flex-col bg-meadow-400 rounded-md p-4 w-2/5 h-full ${
+          IsToggle ? "top-0 opacity-95" : "-top-[600px] opacity-0 z-0"
+        } `}
       >
         <ul className="items-center gap-x-2">
           <li className="text-xl text-white px-2 py-5">
             <Link href={`/`}>Home</Link>
           </li>
           <li className="text-xl text-white px-2 py-5">
-            <Link href={`/works`}>Our Works</Link>
+            <Link href={`/kids`}>Classes for Kids</Link>
           </li>
           <li className="text-xl text-white px-2 py-5">
-            <Link href={`/pricing`}>Pricing</Link>
+            <Link href={`/adults`}>Classes for Teens & Adults</Link>
           </li>
           <li className="text-xl text-white px-2 py-5">
             <Link href={`/about`}>About Us</Link>
           </li>
-          <li className="text-xl text-white px-2 py-5">
+          {/* <li className="text-xl text-white px-2 py-5">
             <button onClick={toggleSidebar}>Contact</button>
           </li>
           <li className="inline-flex gap-x-2 text-xl text-white px-2 py-5 group font-semibold">
             <Link href={`/workshop/booking`}>Booking</Link>
             <FaBookmark className="translate-y-1 text-white-300" />
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

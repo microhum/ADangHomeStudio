@@ -1,8 +1,26 @@
 import { GiWoodBeam } from "react-icons/gi";
 import Link from "next/link";
-import { Slider } from "@/components/Slider";
+import { Slider } from "@/components/Slides";
+import { AnimateFaded } from "@/animate/transition";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 function App() {
+  const ref1 = useRef(null);
+  const isInView1 = useInView(ref1, { margin: "-100px 0px -100px 0px" });
+
+  const ref2 = useRef(null);
+  const isInView2 = useInView(ref2, {
+    margin: "-100px 0px -100px 0px",
+    once: true,
+  });
+
+  const ref3 = useRef(null);
+  const isInView3 = useInView(ref3, {
+    margin: "-100px 0px -100px 0px",
+    once: true,
+  });
+
   return (
     <main>
       {/* Introduction */}
@@ -38,25 +56,49 @@ function App() {
         </div>
       </div>
 
-      
-      <div className="flex flex-col sm:flex-row w-full h-[50vh] drop-shadow-2xl">
-        <div className="flex h-full flex-col justify-center sm:w-5/12 bg-meadow-300">
-          <p className="text-4xl font-semibold p-6">Woodworking For Kids AGE 7-12 YEARS OLD.</p>
-          <Link className="text-2xl font-semibold underline px-6" href="/kids">
-            Learn More.
-          </Link>
+      <div
+        ref={ref2}
+        className="flex flex-col sm:flex-row w-full h-[50vh] bg-green-400"
+      >
+        <div className="flex h-full flex-col justify-center w-5/12 sm:w-5/12">
+          <AnimateFaded isInView={isInView2}>
+            <p className="text-4xl font-semibold p-6">
+              Woodworking For Kids AGE 7-12 YEARS OLD.
+            </p>
+            <Link
+              className="text-2xl font-semibold underline px-6"
+              href="/kids"
+            >
+              Learn More.
+            </Link>
+          </AnimateFaded>
         </div>
+        
+        <AnimateFaded isInView={isInView2}>
           <Slider />
+        </AnimateFaded>
       </div>
 
-      <div className="flex flex-col sm:flex-row w-full h-[50vh]">
-        <div className="flex h-full flex-col justify-center sm:w-5/12 bg-meadow-300">
-          <p className="text-4xl font-semibold p-6">WORKSHOPS FOR TEENS & ADULTS AGE 12+</p>
-          <Link className="text-2xl font-semibold underline px-6" href="/adults">
-            Learn More.
-          </Link>
+      <div
+        ref={ref3}
+        className="flex flex-col sm:flex-row w-full h-[50vh] bg-green-200"
+      >
+        <div className="flex h-full flex-col justify-center sm:w-5/12">
+          <AnimateFaded isInView={isInView3}>
+            <p className="text-4xl font-semibold p-6">
+              WORKSHOPS FOR TEENS & ADULTS AGE 12+
+            </p>
+            <Link
+              className="text-2xl font-semibold underline px-6"
+              href="/adults"
+            >
+              Learn More.
+            </Link>
+          </AnimateFaded>
         </div>
+        <AnimateFaded isInView={isInView3}>
           <Slider />
+        </AnimateFaded>
       </div>
       {/* Image Preview */}
       {/* <div className="relative grid grid-cols-1 w-full max-h-full h-[80vh] bg-amber-300">

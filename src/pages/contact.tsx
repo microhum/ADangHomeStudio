@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoCloseCircle } from "react-icons/io5";
 
-const About = () => {
+const Contact = () => {
   return (
       <div className="flex flex-col justify-center items-center bg-black bg-opacity-80 w-full h-[100vh]">
         <div className="relative flex flex-col h-4/5 w-4/5 bg-meadow-400">
@@ -56,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;
