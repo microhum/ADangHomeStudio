@@ -96,16 +96,14 @@ const Kids = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-5 w-full h-full">
             {kids_items.map((item: any[], idx) => {
               return (
-                <div className="relative h-full w-full">
-                  <div key={`item${idx}`}>
-                    <CustomSlider data={item} />
-                    <button
-                      onClick={scrollTo}
-                      className="absolute lg:opacity-0 lg:peer-hover:opacity-100 text-2xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-60 transition-all bg-white rounded-lg"
-                    >
-                      Requirements
-                    </button>
-                  </div>
+                <div key={`item${idx}`} className="relative h-full w-full">
+                  <CustomSlider data={item} />
+                  <button
+                    onClick={scrollTo}
+                    className="absolute lg:opacity-0 lg:peer-hover:opacity-100 text-2xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-60 transition-all bg-white rounded-lg"
+                  >
+                    Requirements
+                  </button>
                 </div>
               );
             })}
