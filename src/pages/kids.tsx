@@ -8,7 +8,7 @@ import { MdAccessTimeFilled } from "react-icons/md";
 import { GiWoodBeam } from "react-icons/gi";
 import { FaBookmark, FaArrowRight } from "react-icons/fa";
 import { FaFileContract } from "react-icons/fa6";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 
 const Kids = () => {
   const emailFormat: string =
@@ -16,7 +16,7 @@ const Kids = () => {
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollTo = () => {
+  const scrollTo = useCallback(() => {
     const offset = 250;
     if (scrollRef.current) {
       window.scrollTo({
@@ -24,7 +24,7 @@ const Kids = () => {
         behavior: "smooth",
       });
     }
-  };
+  }, []);
 
   return (
     <>
@@ -45,7 +45,7 @@ const Kids = () => {
         CURRENTLY OFFERING
       </div>
 
-      <div className="flex flex-col justify-center items-center my-10 z-20">
+      <div className="flex flex-col justify-center items-center py-10 z-20 bg-cream bg-opacity-40">
         <div className="h-full flex flex-col w-10/12">
           {/* <Image
             src="/images/flexible_crop.jpg"
@@ -78,16 +78,16 @@ const Kids = () => {
           {/* Scheduling */}
           <div className="flex items-center justify-center w-full h-[50vh] bg-meadow-300">
             <div className="flex flex-col p-8 text-white gap-y-2">
-              <p className="text-3xl inline-flex lg:text-6xl font-semibold mb-4">
-                <MdAccessTimeFilled className="mx-5" size={60} />
+              <p className="text-2xl inline-flex lg:text-6xl font-semibold mb-4 items-center">
+                <MdAccessTimeFilled className="mr-5" size={60} />
                 <span>FLEXIBLE SCHEDULING OPTIONS</span>
               </p>
               <div className="list-disc flex flex-col gap-y-2">
-                <li className="text-xl">Duration: 9 March - 12 May 2024</li>
-                <li className="text-xl">Timing: 2.30hr Class 9.30AM - 12PM </li>
-                <li className="text-xl">Open by Appointment Only</li>
-                <li className="text-xl">from Wednesday - Sunday</li>
-                <li className="text-xl">Ages: 7 - 12 years old.</li>
+                <li className="text-sm sm:text-xl">Duration: 9 March - 12 May 2024</li>
+                <li className="text-sm sm:text-xl">Timing: 2.30hr Class 9.30AM - 12PM </li>
+                <li className="text-sm sm:text-xl">Open by Appointment Only</li>
+                <li className="text-sm sm:text-xl">from Wednesday - Sunday</li>
+                <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
               </div>
             </div>
           </div>
@@ -96,15 +96,7 @@ const Kids = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-5 w-full h-full">
             {kids_items.map((item: any[], idx) => {
               return (
-                <div key={`item${idx}`} className="relative h-full w-full">
-                  <CustomSlider data={item} />
-                  <button
-                    onClick={scrollTo}
-                    className="absolute lg:opacity-0 lg:peer-hover:opacity-100 text-2xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-60 transition-all bg-white rounded-lg"
-                  >
-                    Requirements
-                  </button>
-                </div>
+                <CustomSlider key={`item${idx}`} data={item[1]} description={item[0]} scrollTo={scrollTo} />
               );
             })}
           </div>
@@ -130,24 +122,24 @@ const Kids = () => {
 
           <div
             ref={scrollRef}
-            className="flex items-center justify-center w-full h-full bg-meadow-300"
+            className="flex flex-col items-center justify-center w-full h-full bg-meadow-300 "
           >
             <div className="flex flex-col p-8 text-white gap-y-2">
-              <p className="inline-flex text-3xl lg:text-6xl font-semibold mb-4">
-                <FaBookmark className="mx-10" size={70} />
+              <p className="inline-flex text-2xl lg:text-6xl font-semibold mb-4 items-center">
+                <FaBookmark className="mr-5 sm:scale-80" size={50} />
                 <span>BOOKING REQUIREMENTS</span>
               </p>
-              <p className="text-rose-400 text-2xl font-semibold text-shadow-sm">
+              <p className="text-rose-400 text-lg lg:text-2xl font-semibold text-shadow-sm">
                 *** Please Read Before Booking
               </p>
               <ul className="list-disc flex flex-col gap-y-2">
-                <li className="text-xl">
+                <li className="text-sm lg:text-xl">
                   Reserve your least 2 days prior to each class
                 </li>
-                <li className="text-xl">Limited to 4 kids per class</li>
-                <li className="text-xl">No walk-ins</li>
-                <li className="text-xl">First-come, first serve basis</li>
-                <li className="text-xl">Ages: 7 - 12 years old.</li>
+                <li className="text-sm sm:text-xl">Limited to 4 kids per class</li>
+                <li className="text-sm sm:text-xl">No walk-ins</li>
+                <li className="text-sm sm:text-xl">First-come, first serve basis</li>
+                <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
               </ul>
               <Link
                 target="_blank"

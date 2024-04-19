@@ -58,32 +58,37 @@ function App() {
 
       <div
         ref={ref2}
-        className="flex flex-col sm:flex-row w-full h-[50vh] bg-green-400"
+        className=" p-10 w-full h-full lg:h-[50vh] bg-green-400"
       >
-        <div className="flex h-full flex-col justify-center w-5/12 sm:w-5/12">
-          <AnimateFaded isInView={isInView2}>
-            <p className="text-4xl font-semibold p-6">
-              Woodworking For Kids AGE 7-12 YEARS OLD.
-            </p>
-            <Link
-              className="text-2xl font-semibold underline px-6"
-              href="/kids"
-            >
-              Learn More.
-            </Link>
+        <div className="flex flex-col w-full h-full sm:flex-row">
+          <div className="flex h-full flex-col justify-center sm:w-5/12">
+            <AnimateFaded isInView={isInView2}>
+              <p className="text-4xl font-semibold p-6">
+                Woodworking For Kids AGE 7-12 YEARS OLD.
+              </p>
+              <Link
+                className="text-2xl font-semibold underline px-6"
+                href="/kids"
+              >
+                Learn More.
+              </Link>
+            </AnimateFaded>
+          </div>
+
+          <AnimateFaded className="lg:w-3/4 mt-10 lg:mt-0" isInView={isInView2}>
+            <Slider />
           </AnimateFaded>
         </div>
-        
-        <AnimateFaded isInView={isInView2}>
-          <Slider />
-        </AnimateFaded>
       </div>
 
       <div
         ref={ref3}
-        className="flex flex-col sm:flex-row w-full h-[50vh] bg-green-200"
+        className="flex flex-col sm:flex-row w-full p-10 h-full lg:h-[50vh] bg-green-200"
       >
-        <div className="flex h-full flex-col justify-center sm:w-5/12">
+        <AnimateFaded className="lg:w-3/4 mt-10 lg:mt-0" isInView={isInView3}>
+          <Slider />
+        </AnimateFaded>
+        <div className="flex flex-col h-full w-full justify-center sm:w-5/12">
           <AnimateFaded isInView={isInView3}>
             <p className="text-4xl font-semibold p-6">
               WORKSHOPS FOR TEENS & ADULTS AGE 12+
@@ -96,9 +101,8 @@ function App() {
             </Link>
           </AnimateFaded>
         </div>
-        <AnimateFaded isInView={isInView3}>
-          <Slider />
-        </AnimateFaded>
+
+        
       </div>
       {/* Image Preview */}
       {/* <div className="relative grid grid-cols-1 w-full max-h-full h-[80vh] bg-amber-300">

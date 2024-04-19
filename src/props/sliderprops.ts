@@ -1,7 +1,15 @@
 export interface SliderProps {
-  data: {
+  description: {
     id: number;
-    description?: string[];
-    url?: string[];
-  }[];
+    text?: string[];
+  }
+  data: {
+    image: {
+      id: number;
+      url?: string[];
+    }[]
+  }[]
+
+  // scroll function
+  scrollTo: () => void;
 }
