@@ -17,7 +17,7 @@ const Kids = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = () => {
-    const offset = 250
+    const offset = 250;
     if (scrollRef.current) {
       window.scrollTo({
         top: scrollRef.current.offsetTop - offset,
@@ -97,13 +97,15 @@ const Kids = () => {
             {kids_items.map((item: any[], idx) => {
               return (
                 <div className="relative h-full w-full">
-                  <CustomSlider key={`item${idx}`} data={item} />
-                  <button
-                    onClick={scrollTo}
-                    className="absolute lg:opacity-0 lg:peer-hover:opacity-100 text-2xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-60 transition-all bg-white rounded-lg"
-                  >
-                    Requirements
-                  </button>
+                  <div key={`item${idx}`}>
+                    <CustomSlider data={item} />
+                    <button
+                      onClick={scrollTo}
+                      className="absolute lg:opacity-0 lg:peer-hover:opacity-100 text-2xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-60 transition-all bg-white rounded-lg"
+                    >
+                      Requirements
+                    </button>
+                  </div>
                 </div>
               );
             })}
@@ -137,7 +139,9 @@ const Kids = () => {
                 <FaBookmark className="mx-10" size={70} />
                 <span>BOOKING REQUIREMENTS</span>
               </p>
-              <p className="text-rose-400 text-2xl font-semibold text-shadow-sm">*** Please Read Before Booking</p>
+              <p className="text-rose-400 text-2xl font-semibold text-shadow-sm">
+                *** Please Read Before Booking
+              </p>
               <ul className="list-disc flex flex-col gap-y-2">
                 <li className="text-xl">
                   Reserve your least 2 days prior to each class
@@ -148,10 +152,11 @@ const Kids = () => {
                 <li className="text-xl">Ages: 7 - 12 years old.</li>
               </ul>
               <Link
-                className="mt-5 inline-flex items-center font-semibold text-3xl hover:opacity-80 hover:underline transition-all"
+                target="_blank"
+                className="mt-5 inline-flex items-center font-semibold text-3xl hover:opacity-80 hover:underline hover:translate-x-10 transition-all"
                 href={emailFormat}
               >
-                BOOK NOW! <FaArrowRight className="mx-5" size={30}/>
+                BOOK NOW! <FaArrowRight className="mx-5" size={30} />
               </Link>
             </div>
           </div>
