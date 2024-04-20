@@ -65,16 +65,16 @@ const CustomSlider = (props: SliderProps) => {
       </div>
       {/* Description */}
       {props.description ? (
-        <div className="z-10 absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center select-none pointer-events-none opacity-80 lg:opacity-0 lg:group-hover:opacity-100 text-shadow-sm transition-all">
+        <div className="z-10 absolute p-10 w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center select-none pointer-events-none opacity-80 lg:opacity-0 lg:group-hover:opacity-100 text-shadow-sm transition-all">
           <div>
-            <h1 className="text-2xl lg:4xl text-white mb-5 font-bold">
-              WOODWORKING CLASS
+            <h1 className="text-2xl md:text-4xl text-white mb-5 font-bold">
+              {props.description.title}
             </h1>
             <ul className="list-disc">
-              {props.description?.text?.map((text: string, idx: number) => (
+              {props.description.text?.map((text: string, idx: number) => (
                 <li
                   key={idx}
-                  className="text-lg lg:text-2xl text-white font-medium"
+                  className="md:text-2xl text-white font-medium"
                 >
                   {text}
                 </li>
@@ -88,7 +88,7 @@ const CustomSlider = (props: SliderProps) => {
       )}
       <button
         onClick={props.scrollTo}
-        className="absolute opacity-60 lg:opacity-0 peer/button lg:peer-hover:opacity-100 text-2xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-50 transition-all bg-white rounded-lg"
+        className="absolute opacity-60 lg:opacity-0 peer/button lg:peer-hover:opacity-100 md:text-xl top-3/4 left-1/2 transform -translate-x-1/2 z-10 font-semibold px-6 py-4 hover:opacity-50 transition-all bg-white rounded-lg"
       >
         Requirements
       </button>

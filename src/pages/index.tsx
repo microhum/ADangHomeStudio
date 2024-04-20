@@ -2,7 +2,7 @@ import { GiWoodBeam } from "react-icons/gi";
 import Link from "next/link";
 import { Slider } from "@/components/Slides";
 import { AnimateFaded } from "@/animate/transition";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
 function App() {
@@ -12,13 +12,13 @@ function App() {
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2, {
     margin: "-100px 0px -100px 0px",
-    once: true,
+    // once: true,
   });
 
   const ref3 = useRef(null);
   const isInView3 = useInView(ref3, {
     margin: "-100px 0px -100px 0px",
-    once: true,
+    // once: true,
   });
 
   return (
@@ -28,10 +28,10 @@ function App() {
         <div className="flex flex-col lg:w-1/2 text-shadow lg:text-shadow-sm">
           {/* <img className="relative w-3/5 self-center" src="/images/logoweb.png" /> */}
           <div className="z-10 relative inline-flex ml-10 text-5xl">
-            <GiWoodBeam className="hidden lg:flex text-amber-600 h-24 w-24 animate-bounce" />
-            <p className="ml-10 text-white">
-              Spark Your Dream On
-              <span className="text-amber-600 font-bold"> Wood</span> Carving.
+            <GiWoodBeam className="hidden lg:flex text-amber-600 h-24 w-24 animate-bounce " />
+            <p className="ml-10 text-cyan-400">
+              Place where you can do
+              <span className="text-amber-600 font-bold"> Wood Carving.</span> 
             </p>
           </div>
           <button className="z-10 mt-10 self-center text-2xl w-48 h-16 rounded-xl text-white bg-cyan-400 transition-all duration-1000">
@@ -63,8 +63,8 @@ function App() {
         <div className="flex flex-col w-full h-full sm:flex-row">
           <div className="flex h-full flex-col justify-center sm:w-5/12">
             <AnimateFaded isInView={isInView2}>
-              <p className="text-4xl font-semibold p-6">
-                Woodworking For Kids AGE 7-12 YEARS OLD.
+              <p className="text-4xl font-semibold p-6 uppercase">
+                Woodworking For Kids <p className="text-2xl font-bold">AGE 7-12</p>
               </p>
               <Link
                 className="text-2xl font-semibold underline px-6"
@@ -75,7 +75,7 @@ function App() {
             </AnimateFaded>
           </div>
 
-          <AnimateFaded className="lg:w-3/4 mt-10 lg:mt-0" isInView={isInView2}>
+          <AnimateFaded isInView={isInView2}>
             <Slider />
           </AnimateFaded>
         </div>
@@ -90,8 +90,8 @@ function App() {
         </AnimateFaded>
         <div className="flex flex-col h-full w-full justify-center sm:w-5/12">
           <AnimateFaded isInView={isInView3}>
-            <p className="text-4xl font-semibold p-6">
-              WORKSHOPS FOR TEENS & ADULTS AGE 12+
+            <p className="text-4xl font-semibold p-6 uppercase">
+              WORKSHOPS FOR TEENS & ADULTS <p className="text-2xl font-bold">AGE 12+</p>
             </p>
             <Link
               className="text-2xl font-semibold underline px-6"

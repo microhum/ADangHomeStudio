@@ -6,13 +6,16 @@ import Marquee from "@/components/marquee";
 import kids_items from "@/lib/kids_item";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { GiWoodBeam } from "react-icons/gi";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoIosCall } from "react-icons/io";
 import { FaBookmark, FaArrowRight } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 import { FaFileContract } from "react-icons/fa6";
 import { useCallback, useRef } from "react";
+import GmailFormat from "@/utils/gmailFormat";
 
 const Kids = () => {
-  const emailFormat: string =
-    "https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&cc=someone@ola.example&bcc=someone.else@example.com&su=SUBJECT&body=BODY";
+  
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -83,8 +86,12 @@ const Kids = () => {
                 <span>FLEXIBLE SCHEDULING OPTIONS</span>
               </p>
               <div className="list-disc flex flex-col gap-y-2">
-                <li className="text-sm sm:text-xl">Duration: 9 March - 12 May 2024</li>
-                <li className="text-sm sm:text-xl">Timing: 2.30hr Class 9.30AM - 12PM </li>
+                <li className="text-sm sm:text-xl">
+                  Duration: 9 March - 12 May 2024
+                </li>
+                <li className="text-sm sm:text-xl">
+                  Timing: 2.30hr Class 9.30AM - 12PM{" "}
+                </li>
                 <li className="text-sm sm:text-xl">Open by Appointment Only</li>
                 <li className="text-sm sm:text-xl">from Wednesday - Sunday</li>
                 <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
@@ -96,7 +103,12 @@ const Kids = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-5 w-full h-full">
             {kids_items.map((item: any[], idx) => {
               return (
-                <CustomSlider key={`item${idx}`} data={item[1]} description={item[0]} scrollTo={scrollTo} />
+                <CustomSlider
+                  key={`item${idx}`}
+                  data={item[1]}
+                  description={item[0]}
+                  scrollTo={scrollTo}
+                />
               );
             })}
           </div>
@@ -129,25 +141,48 @@ const Kids = () => {
                 <FaBookmark className="mr-5 sm:scale-80" size={50} />
                 <span>BOOKING REQUIREMENTS</span>
               </p>
-              <p className="text-rose-400 text-lg lg:text-2xl font-semibold text-shadow-sm">
+              <p className="text-rose-400 text-sm sm:text-xl font-semibold text-shadow-sm">
                 *** Please Read Before Booking
               </p>
               <ul className="list-disc flex flex-col gap-y-2">
                 <li className="text-sm lg:text-xl">
                   Reserve your least 2 days prior to each class
                 </li>
-                <li className="text-sm sm:text-xl">Limited to 4 kids per class</li>
+                <li className="text-sm sm:text-xl">
+                  Limited to 4 kids per class
+                </li>
                 <li className="text-sm sm:text-xl">No walk-ins</li>
-                <li className="text-sm sm:text-xl">First-come, first serve basis</li>
+                <li className="text-sm sm:text-xl">
+                  First-come, first serve basis
+                </li>
                 <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
               </ul>
-              <Link
-                target="_blank"
-                className="mt-5 inline-flex items-center font-semibold text-3xl hover:opacity-80 hover:underline hover:translate-x-10 transition-all"
-                href={emailFormat}
-              >
-                BOOK NOW! <FaArrowRight className="mx-5" size={30} />
-              </Link>
+              <div className="relative mt-5 h-full w-full flex flex-col items-center gap-x-5 p-3 bg-meadow-400">
+                <p className="text-lg md:text-4xl py-3 px-16 text-black bg-white rounded-xl">
+                  BOOK NOW !
+                </p>
+                <div className="flex gap-x-5 p-4 items-center">
+                  <Link href={GmailFormat({})}>
+                    <BiLogoGmail size={35} />
+                  </Link>
+
+                  {/* <Link href={emailFormat} className="md:text-3xl">
+                    Send Us Email
+                  </Link> */}
+                  <p className="md:text-2xl">OR</p>
+                  <div className="inline-flex gap-x-3">
+                    <Link target="_blank" href="https://www.facebook.com/a.danghomestudio">
+                      <FaFacebook size={30} />
+                    </Link>
+                    <Link target="_blank" href="https://www.instagram.com/a.danghomestudio/">
+                      <FaInstagram size={30} />
+                    </Link>
+                    <Link target="_blank" href="#">
+                      <IoIosCall size={30} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

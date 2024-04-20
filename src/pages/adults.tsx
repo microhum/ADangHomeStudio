@@ -7,7 +7,7 @@ const Adults = () => {
     <>
       <div className="flex flex-col justify-center bg-cover bg-center bg-[url('/images/img_teen.jpg')] h-[100vh]">
         <div className="ml-10 z-10">
-          <p className="text-5xl text-white font-bold text-shadow-lg">
+          <p className="text-5xl text-white font-bold text-shadow-lg stroke-red">
             WORKSHOPS FOR TEENS AND ADULTS
           </p>
           <p className="text-3xl text-white font-semibold">AGE 12+</p>

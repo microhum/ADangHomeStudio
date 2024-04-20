@@ -1,7 +1,8 @@
 export interface SliderProps {
   description: {
     id: number;
-    text?: string[];
+    title: string;
+    text: string[];
   }
   data: {
     image: {

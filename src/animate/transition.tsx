@@ -1,21 +1,36 @@
 import { FC, HTMLAttributes } from "react";
-
+import { motion } from "framer-motion";
 interface AnimateFadedProps {
   children: React.ReactNode;
   isInView: boolean;
-  duration?: number
+  duration?: number;
   className?: string;
 }
 
-const AnimateFaded: FC<AnimateFadedProps> = ({ isInView, children, className, duration=1500}) => {
+const variant = {
+  pageInitial: {
+    opacity: 1,
+  },
+  pageAnimate: {
+    opacity: 0,
+  },
+};
+const AnimateFaded: FC<AnimateFadedProps> = ({
+  isInView,
+  children,
+  className,
+  duration = 10000,
+}) => {
   return (
-    <div
-      className={`relative w-full transition-all ease-in duration-[${duration}ms] ${
-        isInView ? "opacity-100" : "opacity-0"
-      } ${className}`}
+    <motion.div
+      key="animation-on-state"
+      animate={isInView ? "pageInitial" : "pageAnimate"}
+      variants={variant}
+      transition={{ ease: "easeIn", duration: 0.5 }}
+      className={`relative w-full transition-all ease-in`}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

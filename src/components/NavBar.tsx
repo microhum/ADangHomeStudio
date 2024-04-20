@@ -15,7 +15,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       if (window.scrollY >= TOP_OFFSET) {
         setShowBackground(true);
       } else {
@@ -93,6 +93,9 @@ const NavBar = () => {
           </li>
           <li className="text-xl text-white px-2 py-5">
             <Link href={`/about`}>About Us</Link>
+          </li>
+          <li className="text-xl text-white px-2 py-5">
+            <Link href={`/contact`}>Get In Touch</Link>
           </li>
           {/* <li className="text-xl text-white px-2 py-5">
             <button onClick={toggleSidebar}>Contact</button>
