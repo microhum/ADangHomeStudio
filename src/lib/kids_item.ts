@@ -17,7 +17,7 @@ const kids_items: Workshop[] = [
     slides: [
       {
         id: 1,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
       {
         id: 2,
@@ -29,7 +29,7 @@ const kids_items: Workshop[] = [
       },
       {
         id: 4,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
     ],
   },
@@ -49,7 +49,7 @@ const kids_items: Workshop[] = [
     slides: [
       {
         id: 1,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
       {
         id: 2,
@@ -61,7 +61,7 @@ const kids_items: Workshop[] = [
       },
       {
         id: 4,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
     ],
   },
@@ -81,7 +81,7 @@ const kids_items: Workshop[] = [
     slides: [
       {
         id: 1,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
       {
         id: 2,
@@ -93,7 +93,7 @@ const kids_items: Workshop[] = [
       },
       {
         id: 4,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
     ],
   },
@@ -113,7 +113,7 @@ const kids_items: Workshop[] = [
     slides: [
       {
         id: 1,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
       {
         id: 2,
@@ -125,7 +125,7 @@ const kids_items: Workshop[] = [
       },
       {
         id: 4,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
     ],
   },
@@ -145,7 +145,7 @@ const kids_items: Workshop[] = [
     slides: [
       {
         id: 1,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
       {
         id: 2,
@@ -157,7 +157,7 @@ const kids_items: Workshop[] = [
       },
       {
         id: 4,
-        url: ["/images/whittling.jpg"],
+        url: ["/images/whittling/whittling.jpg"],
       },
     ],
   },

@@ -4,6 +4,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { SliderProps } from "@/props/sliderprops";
+import GmailFormat from "@/utils/gmailFormat";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoIosCall } from "react-icons/io";
 
 const Slider = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
@@ -46,13 +50,13 @@ const CustomSlider = (props: SliderProps) => {
           {/* Map Item */}
           {props.slides?.map((item: any) => (
             <div
-              className={`embla__slide relative flex justify-center items-center h-full w-full`}
+              className={`embla__slide relative flex justify-center items-center lg:h-full w-full`}
               key={item.id}
             >
               {item.url?.map((url: string, idx: number) => (
                 <Image
                   key={idx}
-                  className="w-full h-full lg:group-hover:blur-[2px] object-cover"
+                  className="relative w-full h-full lg:group-hover:blur-[2px] object-cover"
                   width={1024}
                   height={1024}
                   src={url}
@@ -91,7 +95,7 @@ const CustomSlider = (props: SliderProps) => {
       ) : (
         ""
       )}
-      
+
       {props.scrollTo ? (
         <button
           onClick={props.scrollTo}
@@ -100,7 +104,46 @@ const CustomSlider = (props: SliderProps) => {
           Requirements
         </button>
       ) : (
-        ""
+        <div className="absolute lg:opacity-0 peer/button lg:peer-hover:opacity-100 hover:opacity-100 top-[57%] lg:top-3/4 left-1/2 transform -translate-x-1/2 z-10 mt-5 h-1/6 w-full flex flex-col items-center gap-x-5 p-3 transition-all">
+          <p className="relative text-sm md:text-lg py-1 px-20 text-black bg-white rounded-xl">
+            BOOK NOW !
+          </p>
+          <div className="relative flex gap-x-5 py-2 items-center ">
+            <Link target="_blank" href={GmailFormat({})}>
+              <BiLogoGmail
+                className="fill-white hover:fill-white transition-all"
+                size={35}
+              />
+            </Link>
+            <p className="text-white md:text-2xl text-shadow">OR</p>
+            <div className="inline-flex gap-x-3">
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/a.danghomestudio"
+              >
+                <FaFacebook
+                  className="fill-white hover:fill-white transition-all"
+                  size={30}
+                />
+              </Link>
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/a.danghomestudio/"
+              >
+                <FaInstagram
+                  className="fill-white hover:fill-white transition-all"
+                  size={30}
+                />
+              </Link>
+              <Link target="_blank" href="#">
+                <IoIosCall
+                  className="fill-white hover:fill-white transition-all"
+                  size={30}
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

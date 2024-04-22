@@ -1,8 +1,8 @@
 import { WorkshopDict } from "@/props/sliderprops";
 
 const teens_items: WorkshopDict = {
-    // Wood whitting
-    "whitting": {
+    // Wood whittling
+    "whittling": {
       metadata: {
         id: 1,
         price: 1000,
@@ -17,19 +17,15 @@ const teens_items: WorkshopDict = {
       slides: [
         {
           id: 1,
-          url: ["/images/whittling.jpg"],
+          url: ["/images/whittling/slide1.jpg"],
         },
         {
           id: 2,
-          url: ["/images/kids/slide2.jpg"],
+          url: ["/images/whittling/slide2.jpg"],
         },
         {
           id: 3,
-          url: ["/images/kids/slide3.jpg"],
-        },
-        {
-          id: 4,
-          url: ["/images/whittling.jpg"],
+          url: ["/images/whittling/slide3.jpg"],
         },
       ],
     },
@@ -83,11 +79,11 @@ const teens_items: WorkshopDict = {
           },
           {
             id: 2,
-            url: ["/images/carving/slide1.jpg"],
+            url: ["/images/carving/slide2.jpg"],
           },
           {
             id: 3,
-            url: ["/images/carving/slide1.jpg"],
+            url: ["/images/carving/slide3.jpg"],
           },
         ],
       },

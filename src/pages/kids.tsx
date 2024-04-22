@@ -158,7 +158,7 @@ const Kids = () => {
                 </li>
                 <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
               </ul>
-              <div className="relative mt-5 h-full w-full flex flex-col items-center gap-x-5 p-3 rounded-lg bg-meadow-400">
+              <div className="relative mt-5 h-full w-full flex flex-col items-center gap-x-5 p-3 rounded-lg">
                 <p className="text-sm md:text-lg py-1 px-20 text-black bg-white rounded-xl">
                   BOOK NOW !
                 </p>
