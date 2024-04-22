@@ -46,6 +46,10 @@
   -webkit-text-stroke-width: 0.5px
 }
 
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
 .cartoon-hero {
   background-image: url("/images/cartoon_bg.jpg")
 }

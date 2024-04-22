@@ -40,7 +40,7 @@ const NavBar = () => {
         <div className="relative flex items-center">
           <Link href="/">
             <Image
-              src="/images/logo_text.png"
+              src="/images/logo/logo_text.png"
               alt="Logo"
               width={200}
               height={200}

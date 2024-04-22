@@ -13,14 +13,13 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaFileContract } from "react-icons/fa6";
 import { useCallback, useRef } from "react";
 import GmailFormat from "@/utils/gmailFormat";
+import { SliderProps } from "@/props/sliderprops";
 
 const Kids = () => {
-  
-
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = useCallback(() => {
-    const offset = 250;
+    const offset = 180;
     if (scrollRef.current) {
       window.scrollTo({
         top: scrollRef.current.offsetTop - offset,
@@ -31,7 +30,7 @@ const Kids = () => {
 
   return (
     <>
-      <div className="relative flex flex-col justify-center bg-cover bg-[url('/images/img_kids.jpg')] w-full h-[100vh]">
+      <div className="relative flex flex-col justify-center bg-cover bg-[url('/images/kids/kids_preview.jpg')] w-full h-[100vh]">
         <div className="ml-10 z-10">
           <p className="text-3xl lg:text-5xl text-white font-bold text-shadow-lg">
             WOODWORKING FOR KIDS
@@ -101,14 +100,16 @@ const Kids = () => {
 
           {/* Caroussel */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-5 w-full h-full">
-            {kids_items.map((item: any[], idx) => {
+            {kids_items.map((item, idx) => {
               return (
-                <CustomSlider
-                  key={`item${idx}`}
-                  data={item[1]}
-                  description={item[0]}
-                  scrollTo={scrollTo}
-                />
+                <div key={`item${idx}`} className="h-[50vh]">
+                  <CustomSlider
+                    key={`item${idx}`}
+                    slides={item.slides}
+                    metadata={item.metadata}
+                    scrollTo={scrollTo}
+                  />
+                </div>
               );
             })}
           </div>
@@ -157,13 +158,16 @@ const Kids = () => {
                 </li>
                 <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
               </ul>
-              <div className="relative mt-5 h-full w-full flex flex-col items-center gap-x-5 p-3 bg-meadow-400">
-                <p className="text-lg md:text-4xl py-3 px-16 text-black bg-white rounded-xl">
+              <div className="relative mt-5 h-full w-full flex flex-col items-center gap-x-5 p-3 rounded-lg bg-meadow-400">
+                <p className="text-sm md:text-lg py-1 px-20 text-black bg-white rounded-xl">
                   BOOK NOW !
                 </p>
-                <div className="flex gap-x-5 p-4 items-center">
-                  <Link href={GmailFormat({})}>
-                    <BiLogoGmail size={35} />
+                <div className="flex gap-x-5 p-4 items-center ">
+                  <Link target="_blank" href={GmailFormat({})}>
+                    <BiLogoGmail
+                      className="hover:fill-slate-300 transition-all"
+                      size={35}
+                    />
                   </Link>
 
                   {/* <Link href={emailFormat} className="md:text-3xl">
@@ -171,14 +175,29 @@ const Kids = () => {
                   </Link> */}
                   <p className="md:text-2xl">OR</p>
                   <div className="inline-flex gap-x-3">
-                    <Link target="_blank" href="https://www.facebook.com/a.danghomestudio">
-                      <FaFacebook size={30} />
+                    <Link
+                      target="_blank"
+                      href="https://www.facebook.com/a.danghomestudio"
+                    >
+                      <FaFacebook
+                        className="hover:fill-slate-300 transition-all"
+                        size={30}
+                      />
                     </Link>
-                    <Link target="_blank" href="https://www.instagram.com/a.danghomestudio/">
-                      <FaInstagram size={30} />
+                    <Link
+                      target="_blank"
+                      href="https://www.instagram.com/a.danghomestudio/"
+                    >
+                      <FaInstagram
+                        className="hover:fill-slate-300 transition-all"
+                        size={30}
+                      />
                     </Link>
                     <Link target="_blank" href="#">
-                      <IoIosCall size={30} />
+                      <IoIosCall
+                        className="hover:fill-slate-300 transition-all"
+                        size={30}
+                      />
                     </Link>
                   </div>
                 </div>

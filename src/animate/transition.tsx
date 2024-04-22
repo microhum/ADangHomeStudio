@@ -27,7 +27,7 @@ const AnimateFaded: FC<AnimateFadedProps> = ({
       animate={isInView ? "pageInitial" : "pageAnimate"}
       variants={variant}
       transition={{ ease: "easeIn", duration: 0.5 }}
-      className={`relative w-full transition-all ease-in`}
+      className={`relative w-full transition-all ease-in ${className}`}
     >
       {children}
     </motion.div>

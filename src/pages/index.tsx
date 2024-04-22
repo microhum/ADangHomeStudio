@@ -2,7 +2,9 @@ import { GiWoodBeam } from "react-icons/gi";
 import Link from "next/link";
 import { Slider } from "@/components/Slides";
 import { AnimateFaded } from "@/animate/transition";
+import { BsFillLightbulbFill } from "react-icons/bs";
 import { useInView, motion } from "framer-motion";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { useRef } from "react";
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
             <GiWoodBeam className="hidden lg:flex text-amber-600 h-24 w-24 animate-bounce " />
             <p className="ml-10 text-cyan-400">
               Place where you can do
-              <span className="text-amber-600 font-bold"> Wood Carving.</span> 
+              <span className="text-amber-600 font-bold"> Wood Carving.</span>
             </p>
           </div>
           <button className="z-10 mt-10 self-center text-2xl w-48 h-16 rounded-xl text-white bg-cyan-400 transition-all duration-1000">
@@ -56,21 +58,20 @@ function App() {
         </div>
       </div>
 
-      <div
-        ref={ref2}
-        className=" p-10 w-full h-full lg:h-[50vh] bg-green-400"
-      >
+      <div ref={ref2} className=" p-10 w-full h-full lg:h-[80vh] bg-green-400">
         <div className="flex flex-col w-full h-full sm:flex-row">
-          <div className="flex h-full flex-col justify-center sm:w-5/12">
-            <AnimateFaded isInView={isInView2}>
-              <p className="text-4xl font-semibold p-6 uppercase">
-                Woodworking For Kids <p className="text-2xl font-bold">AGE 7-12</p>
-              </p>
+          <div className="flex h-full flex-col p-8 justify-center sm:w-5/12">
+            <AnimateFaded className="flex flex-col gap-3" isInView={isInView2}>
+              <h1 className="text-4xl lg:text-6xl font-semibold uppercase">
+                Wood working For Kids
+              </h1>
+              <p className="text-2xl font-bold">AGE 7-12</p>
               <Link
-                className="text-2xl font-semibold underline px-6"
+                className="group inline-flex items-center gap-3 mt-4 text-2xl lg:text-4xl uppercase font-semibold hover:underline"
                 href="/kids"
               >
                 Learn More.
+                <MdOutlineKeyboardDoubleArrowRight className="group-hover:scale-120 group-hover:translate-x-8 transition-transform" size={50} />
               </Link>
             </AnimateFaded>
           </div>
@@ -83,26 +84,26 @@ function App() {
 
       <div
         ref={ref3}
-        className="flex flex-col sm:flex-row w-full p-10 h-full lg:h-[50vh] bg-green-200"
+        className="flex flex-col sm:flex-row w-full p-10 h-full lg:h-[80vh] bg-green-200"
       >
-        <AnimateFaded className="lg:w-3/4 mt-10 lg:mt-0" isInView={isInView3}>
+        <AnimateFaded className="lg:w-3/4 lg:mt-0" isInView={isInView3}>
           <Slider />
         </AnimateFaded>
-        <div className="flex flex-col h-full w-full justify-center sm:w-5/12">
-          <AnimateFaded isInView={isInView3}>
-            <p className="text-4xl font-semibold p-6 uppercase">
-              WORKSHOPS FOR TEENS & ADULTS <p className="text-2xl font-bold">AGE 12+</p>
-            </p>
+        <div className="flex flex-col h-full w-full justify-center p-8 sm:w-5/12">
+          <AnimateFaded className="flex flex-col gap-3" isInView={isInView3}>
+            <h1 className="text-4xl lg:text-6xl font-semibold uppercase">
+              WORKSHOPS FOR TEENS & ADULTS{" "}
+            </h1>
+            <p className="text-2xl font-bold">AGE 12+</p>
             <Link
-              className="text-2xl font-semibold underline px-6"
+              className="inline-flex uppercase group items-center gap-3 mt-4 text-2xl lg:text-4xl font-semibold hover:underline"
               href="/adults"
             >
               Learn More.
+              <MdOutlineKeyboardDoubleArrowRight className="group-hover:scale-120 group-hover:translate-x-8 transition-transform" size={50} />
             </Link>
           </AnimateFaded>
         </div>
-
-        
       </div>
       {/* Image Preview */}
       {/* <div className="relative grid grid-cols-1 w-full max-h-full h-[80vh] bg-amber-300">

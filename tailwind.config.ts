@@ -49,6 +49,9 @@ const config: Config = {
     },
   },
   plugins: [
+    require("tailwindcss-animate"),
+    
+    // text-shadow plugin
     plugin(function (props: { matchUtilities: any, theme: any }) {
       const {matchUtilities, theme} = props
       matchUtilities(
