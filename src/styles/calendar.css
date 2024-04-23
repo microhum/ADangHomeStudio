@@ -1,0 +1,24 @@
+@import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
+@import "react-big-calendar/lib/css/react-big-calendar.css";
+
+.rbc-header {
+    @apply bg-white text-lg;
+    color: black;
+    padding: 4px;
+    font-weight: bold;
+  }
+  
+  .rbc-event {
+    padding: 2px !important;
+    font-size: 16px;
+  }
+  
+  .rbc-event-label {
+    display: none !important;
+  }
+  .rbc-today {
+    @apply bg-green-200
+  }
+  .rbc-events-container {
+    /* background-color: blueviolet !important; */
+  }

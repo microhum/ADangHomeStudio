@@ -2,6 +2,7 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 import { Slider, CustomSlider } from "@/components/Slides";
+import { MyCalendar } from "@/components/calendar";
 import Marquee from "@/components/marquee";
 import kids_items from "@/lib/kids_item";
 import { MdAccessTimeFilled } from "react-icons/md";
@@ -48,7 +49,7 @@ const Kids = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center py-10 z-20 bg-cream bg-opacity-40">
-        <div className="h-full flex flex-col w-10/12">
+        <div className="h-full flex flex-col w-full lg:w-10/12">
           {/* <Image
             src="/images/flexible_crop.jpg"
             alt=""
@@ -158,10 +159,12 @@ const Kids = () => {
                 </li>
                 <li className="text-sm sm:text-xl">Ages: 7 - 12 years old.</li>
               </ul>
+              <MyCalendar />
               <div className="relative mt-5 h-full w-full flex flex-col items-center gap-x-5 p-3 rounded-lg">
                 <p className="text-sm md:text-lg py-1 px-20 text-black bg-white rounded-xl">
                   BOOK NOW !
                 </p>
+
                 <div className="flex gap-x-5 p-4 items-center ">
                   <Link target="_blank" href={GmailFormat({})}>
                     <BiLogoGmail
